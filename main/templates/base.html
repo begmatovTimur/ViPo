@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Square+Peg&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <title>ViPo</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">ViPo</div>
+
+         <div class="nav-input">
+            <input type="search" class="input" placeholder="search">
+         </div>
+
+       <div class="nav-items">
+            <div class="nav-item">
+                <img src="https://www.svgrepo.com/show/419540/house-home-dashboard.svg" width="40px">
+            </div>
+
+            <div class="nav-item">
+                <img src="https://www.svgrepo.com/show/39559/message.svg" width="40px">
+            </div>
+
+            <div class="nav-item">
+                <img src="https://www.svgrepo.com/show/419549/bell-mobile-ui-notification.svg" width="40px">
+            </div>
+
+            <div class="nav-item">
+                <img src="https://www.svgrepo.com/show/30426/add.svg" width="40px">
+            </div>
+            
+            <div class="nav-item">
+                <img src="https://www.svgrepo.com/show/419535/profile-about-mobile-ui.svg" width="40px">
+            </div>
+        </div>
+    </div> 
+
+    <div class="input_for_mobile_screen">
+        <input type="search" class="second_input" placeholder="search">
+    </div>
+
+    <div class="navigation">
+        <div class="menuToggle"></div>
+        <ul class="menu">
+          <li>
+            <a href="#">
+                <img src="https://www.svgrepo.com/show/419540/house-home-dashboard.svg" width="40px">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+                <img src="https://www.svgrepo.com/show/39559/message.svg" width="40px">
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+                <img src="https://www.svgrepo.com/show/419549/bell-mobile-ui-notification.svg" width="40px">
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+                <img src="https://www.svgrepo.com/show/30426/add.svg" width="40px">
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+                <img src="https://www.svgrepo.com/show/419535/profile-about-mobile-ui.svg" width="40px">
+            </a>
+          </li>
+        </ul>
+      </div>
+    
+    {% block body %}
+    {% endblock %}
+
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<section class="main_box">
+    {% for post in posts %}
+        <div class="post_container">
+            <div class="post_box">
+                <div class="first_box">
+                    <img src="{{ post.author.image.url }}" width="40px" height="40px"  class="author_image">
+
+                    <p class="post_author">{{ post.author }}</p>
+                </div>
+
+                <hr>
+
+                <div class="second_box">
+                    <img src="{{ post.image.url }}" class="post_image">
+                </div>
+
+                <div class="third_box">
+                    <p class="post_text">{{ post.text }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</section>
+
+{% endblock %}
+
