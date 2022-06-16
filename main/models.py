@@ -24,3 +24,12 @@ class Post(models.Model):
 
     def __str__(self):
         return f'{self.author.name}: {self.title}'
+
+
+class Comment(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
+    post = models.ForeignKey(Post, on_delete=models.PROTECT, related_name='comments')
+    text = models.TextField()
+
+    def __str__(self):
+        return f'{self.author.name} - {self.text}'

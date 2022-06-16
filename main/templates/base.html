@@ -15,15 +15,19 @@
 <body>
 
     <div class="container">
-        <div class="logo">ViPo</div>
+        <div class="logo">
+            <a class="home_link" href="{% url '' %}">ViPo</a>
+        </div>
 
-         <div class="nav-input">
-            <input type="search" class="input" placeholder="search">
-         </div>
+        <div class="nav-input">
+          <input type="search" class="input" placeholder="search">
+        </div>
 
-       <div class="nav-items">
+        <div class="nav-items">
             <div class="nav-item">
-                <img src="https://www.svgrepo.com/show/419540/house-home-dashboard.svg" width="40px">
+                <a href="{% url '' %}">
+                  <img src="https://www.svgrepo.com/show/419540/house-home-dashboard.svg" width="40px">
+                </a>
             </div>
 
             <div class="nav-item">

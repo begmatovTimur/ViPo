@@ -18,6 +18,12 @@ body {
 .logo {
     font-size: 50px;
     font-family: 'Dancing Script', cursive;
+    text-decoration: none;
+}
+
+.home_link {
+    text-decoration: none;
+    color: #000;
 }
 
 .input {
@@ -62,6 +68,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: #fafafa;
+    font-family: sans-serif;
 }
 
 .post_box {
@@ -81,6 +88,7 @@ body {
 
 .post_author {
     margin-left: 10px;
+    margin-right: 5px;
     font-family: sans-serif;
 }
 
@@ -92,6 +100,41 @@ body {
     margin-left: 10px;
     margin-bottom: 10px;
     font-family: sans-serif;
+}
+
+.third_box {
+    display: flex;
+    align-items: center;
+}
+
+.post_detail_url {
+    color: rgb(134, 134, 134);
+    text-decoration: none;
+    margin-left: 9px;
+}
+
+.post_title {
+    font-size: 20px;
+}
+
+.fourth_box {
+    display: flex;
+    justify-content: center;
+}
+
+.fifth_box {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.comment_author {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.comment_text {
+    font-size:15px;
 }
 
 @media screen and (max-width: 760px) {

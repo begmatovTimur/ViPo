@@ -19,7 +19,8 @@
                 </div>
 
                 <div class="third_box">
-                    <p class="post_text">{{ post.text }}</p>
+                    <p class="post_text">{{ post.title }}</p>
+                    <a class="post_detail_url" href="{% url 'post_detail' post.id %}">еще</a>
                 </div>
             </div>
         </div>

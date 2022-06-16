@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<section class="main_box">
+    <div class="post_container">
+        <div class="post_box">
+            <div class="first_box">
+                <img src="{{ post.author.image.url }}" width="40px" height="40px"  class="author_image">
+
+                <p class="post_author">{{ post.author }}</p>
+            </div>
+
+            <hr>
+
+            <div class="second_box">
+                <img src="{{ post.image.url }}" class="post_image">
+            </div>
+
+            <div class="third_box">
+                <p class="post_author">{{ post.author }} *</p>
+                <p class="post_title">{{ post.title }}</p>
+                <p class="post_text">{{ post.text }}</p>
+            </div>
+
+            <hr>
+
+            <div class="fourth_box">
+                <h1>Комментарии</h1>
+            </div>
+
+            <hr>
+            
+            {% for comment in comments.all %}
+                <div class="fifth_box">
+                    <b class="comment_author">{{ comment.author }}</b>
+                    <p class="comment_text">{{ comment.text }}</p>
+                </div>
+            {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
