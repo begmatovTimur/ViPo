@@ -7,6 +7,7 @@ body {
     overflow-wrap: break-word;
     flex-wrap: wrap;
     justify-content: center;
+    font-family: sans-serif;
 }
 
 /* nav-bar */
@@ -135,6 +136,116 @@ body {
 
 .comment_text {
     font-size:15px;
+}
+
+/* profile styles */
+.main_profile_box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #fafafa;
+}
+
+.profile_container {
+    width: 70%;
+    height: 100vh;
+    /* background-color: yellow; */
+}
+/* profile about */
+.profile_about {
+    display: flex;
+    padding: 40px;
+}
+
+/* profile image */
+.profile_image {
+    width: 30%;
+}
+
+.profile_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 60%;
+}
+/* profile bio */
+.profile_details {
+    width: 70%;
+}
+
+.nickName {
+    display: flex;
+    align-items: center;
+}
+
+.profile_nickName {
+    font-size: 30px;
+}
+
+/* button for change profile */
+.changeProfile {
+    height: 30px;
+    margin-left: 100px;
+    background-color: white;
+    border: outset;
+    border-radius: 50px;
+}
+
+.changeProfile:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+/* nameLastName */
+.nameLastName {
+    display: flex;
+}
+
+.profil_name {
+    margin-right: 8px;
+}
+
+.profile_lastName {
+    margin-left: 8px;
+}
+
+.profile_bio {
+    width: 60%;
+}
+
+.profileBio {
+    font-weight: 100;
+}
+
+/* profileActive */
+.profileActive {
+    display: flex;
+    justify-content: space-around;
+}
+
+.postsNumber {
+    display: flex;
+    align-items: center;
+}
+
+.number {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.string {
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 5px;
+}
+
+.followersNumber {
+    display: flex;
+    align-items: center;
+}
+
+.followingsNumber {
+    display: flex;
+    align-items: center;
 }
 
 @media screen and (max-width: 760px) {
@@ -289,11 +400,15 @@ body {
 
     .post_box {
       width: 80%;
-    }
+    } 
 }
 
 @media screen and (max-width: 320px) {
     .post_box {
+      width: 100%;
+    }
+
+    .profile_container {
       width: 100%;
     }
 }

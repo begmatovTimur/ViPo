@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class SignUpForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = User
-        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2',)
+        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2')
 
     first_name = forms.CharField(
         max_length=12, 
@@ -19,6 +19,10 @@ class SignUpForm(UserCreationForm):
         min_length=4, 
         required=True,
         widget=(forms.TextInput(attrs={'class': 'input mt-2', 'placeholder': 'Фамилия'}))
+    )
+    bio = forms.CharField(
+        label='Bio',
+        widget=forms.TextInput(attrs={'class': 'input mt-2', 'placeholder': 'bio'})
     )
     email = forms.EmailField(
         max_length=50, 

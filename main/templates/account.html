@@ -2,6 +2,53 @@
 
 {% block body %}
 
-<p>hello world</p>
+<div class="main_profile_box">
+    <div class="profile_container">
+        <div class="profile_about">
+            <div class="profile_image">
+                <img src="https://upleap.com/blog/wp-content/uploads/2018/10/how-to-create-the-perfect-instagram-profile-picture.jpg" class="profile_img">
+            </div>
+    
+            <div class="profile_details">
+                <div class="nickName">
+                    <p class="profile_nickName">{{ request.user }}</p>
+
+                    <button class="changeProfile">Изменить профиль</button>
+                </div>
+
+                <div class="nameLastName">
+                    <b class="profile_name">{{ request.user.first_name }}</b>
+
+                    <b class="profile_lastName">{{ request.user.last_name }}</b>
+                </div>
+
+                <div class="profile_bio">
+                    <p class="profileBio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita id dolorum modi fugit, cumque inventore quaerat neque deserunt sunt enim.</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="profileActive">
+            <div class="postsNumber">
+                <b class="number">432</b>
+
+                <p class="string">публикаций</p>
+            </div>
+
+            <div class="followersNumber">
+                <b class="number">45632</b>
+
+                <p class="string">подписчик</p>
+            </div>
+
+            <div class="followingsNumber">
+                <b class="number">54</b>
+
+                <p class="string">подписки</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
