@@ -1,7 +1,7 @@
-import re
 from django.shortcuts import render, redirect
 from main.models import Post, Comment
 from main.user_form import SignUpForm
+from main.login_form import LoginForm
 from django.contrib.auth import login, authenticate
 
 
@@ -34,3 +34,22 @@ def register(request):
         return redirect('/')
 
     return render(request, "register.html", {'form': form})
+
+
+def log_in(request):
+    form = LoginForm(request.POST or None)
+
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        
+        if user is not None:
+            login(request, user)
+            return redirect("/")
+
+    return render(request, "login.html", {'form': form})
+
+
+def account(request):
+    return render(request, "account.html")

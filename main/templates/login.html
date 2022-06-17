@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="container m-6">
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <p class="text">Никнейм</p>
+
+        {{ form.username }}
+
+        {{ form.password }}
+
+        <p class="text">Пароль</p>
+
+        <p class="has-text-centered mt-5">
+            <button type="submit" class="button is-outlined is-rounded is-info">Логин</button>
+        </p>
+
+    </form>
+</div>
+
+{% endblock %}
