@@ -23,6 +23,9 @@ class Post(models.Model):
     text = models.TextField(max_length=500)
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
+    def number_of_likes(self):
+        return self.likes.count()
+
     def __str__(self):
         return f'{self.author.name}: {self.title}'
 

@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from main.models import Post, Comment
 from main.user_form import SignUpForm
 from main.login_form import LoginForm
@@ -14,7 +16,7 @@ def index(request):
 def post_detail(request, pk):
     post = Post.objects.get(pk=pk)
     comments = Comment.objects.all()
-
+    
 
     return render(request, "post_detail.html", {'post': post, 'comments': comments})
 
